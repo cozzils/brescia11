@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serate in Oratorio - Giochi Scout</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2C3E50;
+            --secondary-color: #E74C3C;
+            --accent-color: #3498DB;
+            --light-color: #ECF0F1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--primary-color);
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('/api/placeholder/1920/1080') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background-color: var(--secondary-color);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #c0392b;
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        /* Features */
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--light-color);
+            border-radius: 10px;
+            transition: transform 0.3s;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--accent-color);
+            margin-bottom: 1rem;
+        }
+
+        /* Schedule */
+        .schedule {
+            background-color: var(--light-color);
+        }
+
+        .schedule-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .schedule-item {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        /* Contact */
+        .contact-info {
+            text-align: center;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Scout Oratorio</div>
+            <div class="nav-links">
+                <a href="#chi-siamo">Chi Siamo</a>
+                <a href="#attivita">Attività</a>
+                <a href="#orari">Orari</a>
+                <a href="#contatti">Contatti</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Serate di Giochi in Oratorio</h1>
+            <p>Unisciti a noi per serate indimenticabili di divertimento, amicizia e scoperta</p>
+            <a href="#contatti" class="cta-button">Partecipa Ora</a>
+        </div>
+    </section>
+
+    <section id="chi-siamo">
+        <h2 class="section-title">Chi Siamo</h2>
+        <div class="features">
+            <div class="feature-card">
+                <i class="fas fa-users"></i>
+                <h3>Comunità</h3>
+                <p>Un gruppo scout appassionato che crede nel valore dell'incontro e della condivisione attraverso il gioco.</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-heart"></i>
+                <h3>Accoglienza</h3>
+                <p>Le nostre serate sono aperte a tutti, senza distinzioni. Ogni persona è benvenuta!</p>
+            </div>
+            <div class="feature-card">
+                <i class="fas fa-star"></i>
+                <h3>Esperienza</h3>
+                <p>Anni di esperienza nell'organizzazione di attività educative e ricreative per giovani e adulti.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="attivita" class="schedule">
+        <h2 class="section-title">LE NOSTRE ATTIVITA</h2>
+        <div class="schedule-grid">
+            <div class="schedule-item">
+                <h3>Giochi di Squadra</h3>
+                <p>Attività che favoriscono la collaborazione e il lavoro di gruppo, perfette per conoscersi divertendosi.</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Giochi da Tavolo</h3>
+                <p>Una vasta selezione di giochi da tavolo moderni e classici per tutti i gusti.</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Sfide Creative</h3>
+                <p>Attività che stimolano la creatività e l'ingegno attraverso quiz e prove di abilità.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="orari">
+        <h2 class="section-title">Quando Trovarci</h2>
+        <div class="schedule-grid">
+            <div class="schedule-item">
+                <h3>Orari</h3>
+                <p>Ogni venerdì sera dalle 21:00 alle 23:30</p>
+                <p>Sabato pomeriggio dalle 15:00 alle 18:00</p>
+            </div>
+            <div class="schedule-item">
+                <h3>Dove Siamo</h3>
+                <p>Oratorio San Giovanni Bosco</p>
+                <p>Via dell'Oratorio, 1</p>
+                <p>La struttura è facilmente raggiungibile con i mezzi pubblici</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contatti">
+        <h2 class="section-title">Contattaci</h2>
+        <div class="contact-info">
+            <p>Per maggiori informazioni:</p>
+            <p>Email: Cozziluca1@gmail.com</p>
+            <p>Tel: 39- </p>
+            <div class="social-links">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Scout Oratorio - Tutti i diritti riservati</p>
+    </footer>
+</body>
+</html>
