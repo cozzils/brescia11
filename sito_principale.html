@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noviziato BS11 | Strada, Comunità, Servizio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="sito_principale.css">
+    <link rel="stylesheet" href="css/sito_principale.css">
     <link rel="icon" href="images/brescia11.jpg">
 </head>
 <body>
@@ -13,11 +13,14 @@
         <div class="header-content">
             <h1>NOVIZIATO BS11</h1>
             <p>Strada · Comunità · Servizio</p>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
         </div>
     </header>
 
     <nav class="nav">
-        <ul class="nav-list">
+        <ul class="nav-list" id="nav-list">
             <li><a href="#strada"><i class="fas fa-hiking"></i> La Strada</a></li>
             <li><a href="#servizio"><i class="fas fa-hands-helping"></i> Servizio</a></li>
             <li><a href="#attivita"><i class="fas fa-calendar-alt"></i> Attività</a></li>
@@ -58,7 +61,7 @@
                 <div class="dashboard-card oratorio-card">
                     <h3><i class="fas fa-church"></i> Serate Oratorio</h3>
                     <p>Accedi al portale delle serate in oratorio</p>
-                    <a href="sito.html" class="btn" id="sito.html">Vai al sito</a>
+                    <a href="sito.html" class="btn" id="sito.html">vai al sito</a>
                 </div>
                 <div class="dashboard-card">
                     <h3><i class="fas fa-link"></i> Collegamenti Rapidi</h3>
@@ -138,11 +141,11 @@
                         <ul style="list-style: none; margin-top: 1rem;">
                             <li style="margin-bottom: 1rem;">
                                 <i class="fas fa-map-marker-alt" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                <strong>Sede:</strong> Via degli Scout, 11 - Brescia
+                                <strong>Sede:</strong> Parrocchia di San Francesco Da Paola
                             </li>
                             <li style="margin-bottom: 1rem;">
                                 <i class="fas fa-phone" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                <strong>Telefono:</strong> 030 1234567
+                                <strong>Telefono:</strong> 030 371 425 3750
                             </li>
                             <li style="margin-bottom: 1rem;">
                                 <i class="fas fa-envelope" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
@@ -230,26 +233,38 @@
                     }
                     </script>
     
-                    <!-- Mappa e Social -->
-                    <div class="contact-social" style="background: var(--light-beige); padding: 2rem; border-radius: 8px;">
-                        <h3><i class="fas fa-share-alt"></i> Seguici</h3>
-                        <div class="social-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-                            <a href="#" class="social-btn" style="background: #3b5998; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
-                                <i class="fab fa-facebook"></i> Facebook
-                            </a>
-                            <a href="#" class="social-btn" style="background: #e1306c; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
-                                <i class="fab fa-instagram"></i> Instagram
-                            </a>
-                           </div>
-    
-                        <h4 style="margin-top: 2rem;"><i class="fas fa-map-marked-alt"></i> Dove siamo</h4>
-                        <div class="map-placeholder" style="margin-top: 1rem; background: #ddd; height: 200px; border-radius: 4px; display: flex; align-items: center; justify-content: center;">
-                            <p>Mappa Google qui</p>
-                        </div>
-                    </div>
-                </div>
+             <!-- Mappa e Social -->
+<div class="contact-social" style="background: var(--light-beige); padding: 2rem; border-radius: 8px;">
+    <h3><i class="fas fa-share-alt"></i> Seguici</h3>
+    <div class="social-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
+        <a href="#" class="social-btn" style="background: #3b5998; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
+            <i class="fab fa-facebook"></i> Facebook
+        </a>
+        <a href="https://www.instagram.com/noviziato.wanderlust_bs11/" target="_blank" class="social-btn" style="background: #e1306c; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
+            <i class="fab fa-instagram"></i> Instagram
+        </a>
+    </div>
+
+    <h4 style="margin-top: 2rem;"><i class="fas fa-map-marked-alt"></i> Dove siamo</h4>
+    <div class="map-container" style="margin-top: 1rem; width: 100%; height: 300px; border-radius: 4px; overflow: hidden;">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.688158458626!2d10.245140076880531!3d45.53202417107516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47819df6ee95a4cb%3A0xe4b3fda017965e01!2sParrocchia%20di%20San%20Francesco%20Da%20Paola!5e1!3m2!1sit!2sit!4v1739182085657!5m2!1sit!2sit"
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+</div>
             </section>
     
         </main>
     </body>
-    </html>
+    <script>
+        document.getElementById('hamburger').addEventListener('click', function() {
+            document.getElementById('nav-list').classList.toggle('show');
+        });
+    </script>
+</html>
