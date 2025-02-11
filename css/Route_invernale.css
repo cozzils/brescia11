@@ -1,0 +1,64 @@
+
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 1rem;
+}
+
+.scout-green {
+    background-color: #2A5A3B;
+}
+
+.scout-brown {
+    color: #8B4513;
+}
+
+.scout-border {
+    border: 3px solid #8B4513;
+}
+
+/* Stili responsivi */
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+        padding: 0 1rem;
+    }
+
+    .header-subtitle {
+        font-size: 1.3rem;
+        padding: 0 1rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-text {
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+
+    .mobile-full-width {
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin-bottom: 1.5rem;
+    }
+
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+
+    .mobile-image {
+        margin-top: 1rem;
+        margin-bottom: 2rem;
+    }
+}
