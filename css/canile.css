@@ -1,0 +1,140 @@
+.back-button {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    z-index: 1000;
+    font-size: 1rem;
+}
+:root {
+    --scout-green: #436b1c;
+    --scout-brown: #8b4513;
+    --light-beige: #f5f5dc;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    background-color: var(--light-beige);
+    color: #333;
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+.header {
+    background-color: var(--scout-green);
+    color: white;
+    padding: 2rem 1rem;
+    text-align: center;
+    background-image: url('/api/placeholder/800/400');
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    min-height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section {
+    margin-bottom: 2rem;
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.section:nth-child(odd) {
+    background-color: var(--light-beige);
+}
+
+.section-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    overflow: hidden;
+}
+
+.section-image img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.section-content {
+    padding: 1.5rem;
+}
+
+.section h2 {
+    color: var(--scout-green);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.quote {
+    font-style: italic;
+    color: var(--scout-brown);
+    border-left: 4px solid var(--scout-brown);
+    padding: 1rem;
+    margin: 1.5rem 0;
+    background-color: rgba(139, 69, 19, 0.1);
+    border-radius: 0 8px 8px 0;
+}
+
+.activity-list {
+    list-style: none;
+    margin: 1rem 0;
+}
+
+.activity-list li {
+    padding: 0.8rem 0;
+    border-bottom: 1px solid rgba(67, 107, 28, 0.2);
+    display: flex;
+    align-items: center;
+}
+
+.activity-list li::before {
+    content: "✓";
+    color: var(--scout-green);
+    margin-right: 0.5rem;
+}
+
+.footer {
+    background-color: var(--scout-green);
+    color: white;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+footer {
+    background-color: #2E7D32;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+@media screen and (max-width: 768px) {
+    .section {
+        border-radius: 0;
+    }
+}
