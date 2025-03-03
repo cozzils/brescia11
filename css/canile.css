@@ -1,19 +1,8 @@
-.back-button {
-    position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: #4CAF50;
-    color: white;
-    padding: 8px 15px;
-    text-decoration: none;
-    border-radius: 5px;
-    z-index: 1000;
-    font-size: 1rem;
-}
 :root {
     --scout-green: #436b1c;
     --scout-brown: #8b4513;
     --light-beige: #f5f5dc;
+    --accent-color: #5d8a2a;
 }
 
 * {
@@ -23,45 +12,103 @@
 }
 
 body {
-    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background-color: var(--light-beige);
     color: #333;
     line-height: 1.6;
     font-size: 16px;
 }
 
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: linear-gradient(135deg, var(--scout-green), #5d8a2a);
+    color: white;
+    padding: 12px 20px;
+    text-decoration: none;
+    border-radius: 30px;
+    z-index: 1000;
+    font-size: 1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    transition: all 0.3s ease;
+}
+
+.home-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+}
+
+.home-button i {
+    margin-right: 8px;
+}
+
 .header {
     background-color: var(--scout-green);
     color: white;
-    padding: 2rem 1rem;
+    padding: 3rem 1rem;
     text-align: center;
     background-image: url('/api/placeholder/800/400');
     background-size: cover;
     background-position: center;
     background-blend-mode: overlay;
-    min-height: 30vh;
+    min-height: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    position: relative;
+}
+
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30px;
+    background: linear-gradient(135deg, var(--light-beige) 25%, transparent 25%) -15px 0,
+                linear-gradient(225deg, var(--light-beige) 25%, transparent 25%) -15px 0,
+                linear-gradient(315deg, var(--light-beige) 25%, transparent 25%),
+                linear-gradient(45deg, var(--light-beige) 25%, transparent 25%);
+    background-size: 30px 30px;
+    background-color: var(--scout-green);
 }
 
 .header h1 {
-    font-size: 1.8rem;
-    margin-bottom: 0.5rem;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
     text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    letter-spacing: 2px;
+}
+
+.header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
 }
 
 main {
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 2rem auto;
+    padding: 0 20px;
 }
 
 .section {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     background-color: white;
-    border-radius: 8px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .section:nth-child(odd) {
@@ -70,71 +117,233 @@ main {
 
 .section-image {
     width: 100%;
-    height: auto;
-    max-height: 300px;
+    height: 300px;
     overflow: hidden;
 }
 
 .section-image img {
     width: 100%;
+    height: 100%;
     display: block;
     object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.section:hover .section-image img {
+    transform: scale(1.05);
 }
 
 .section-content {
-    padding: 1.5rem;
+    padding: 2rem;
 }
 
 .section h2 {
     color: var(--scout-green);
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+    font-size: 1.8rem;
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--accent-color);
+}
+
+.section p {
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
 }
 
 .quote {
     font-style: italic;
     color: var(--scout-brown);
     border-left: 4px solid var(--scout-brown);
-    padding: 1rem;
-    margin: 1.5rem 0;
-    background-color: rgba(139, 69, 19, 0.1);
-    border-radius: 0 8px 8px 0;
+    padding: 1.2rem;
+    margin: 1.8rem 0;
+    background-color: rgba(139, 69, 19, 0.08);
+    border-radius: 0 12px 12px 0;
+    position: relative;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 3rem;
+    position: absolute;
+    top: -15px;
+    left: 10px;
+    color: rgba(139, 69, 19, 0.2);
 }
 
 .activity-list {
     list-style: none;
-    margin: 1rem 0;
+    margin: 1.5rem 0;
 }
 
 .activity-list li {
-    padding: 0.8rem 0;
+    padding: 1rem 0;
     border-bottom: 1px solid rgba(67, 107, 28, 0.2);
     display: flex;
     align-items: center;
+    font-size: 1.05rem;
+}
+
+.activity-list li:last-child {
+    border-bottom: none;
 }
 
 .activity-list li::before {
     content: "✓";
     color: var(--scout-green);
-    margin-right: 0.5rem;
+    margin-right: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
-.footer {
-    background-color: var(--scout-green);
-    color: white;
+.social-section {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 12px;
+    margin-bottom: 3rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.social-section h2 {
+    color: var(--scout-green);
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.instagram-container {
+    max-width: 500px;
+    margin: 0 auto;
+    border: 1px solid #dbdbdb;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: white;
+}
+
+.instagram-header {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    border-bottom: 1px solid #efefef;
+}
+
+.instagram-header img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.instagram-header .username {
+    font-weight: bold;
+    color: #262626;
+}
+
+.instagram-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.instagram-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.instagram-actions {
+    padding: 12px;
+    border-top: 1px solid #efefef;
+}
+
+.instagram-actions i {
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #262626;
+}
+
+.instagram-caption {
+    padding: 12px;
+    font-size: 0.9rem;
+}
+
+.instagram-link {
+    display: inline-block;
+    margin-top: 1.5rem;
+    background: linear-gradient(45deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.instagram-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+.instagram-link i {
+    margin-right: 8px;
 }
 
 footer {
-    background-color: #2E7D32;
+    background-color: var(--scout-green);
     color: white;
     text-align: center;
-    padding: 15px;
+    padding: 2rem;
+    position: relative;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: linear-gradient(135deg, var(--scout-green) 25%, transparent 25%) -10px 0,
+                linear-gradient(225deg, var(--scout-green) 25%, transparent 25%) -10px 0,
+                linear-gradient(315deg, var(--scout-green) 25%, transparent 25%),
+                linear-gradient(45deg, var(--scout-green) 25%, transparent 25%);
+    background-size: 20px 20px;
+    background-color: var(--light-beige);
 }
 
 @media screen and (max-width: 768px) {
+    .header h1 {
+        font-size: 1.8rem;
+    }
+    
     .section {
-        border-radius: 0;
+        border-radius: 8px;
+    }
+    
+    .section-image {
+        height: 200px;
+    }
+    
+    .section-content {
+        padding: 1.5rem;
+    }
+    
+    .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 8px 15px;
+        font-size: 0.9rem;
+    }
+    
+    .instagram-container {
+        max-width: 100%;
     }
 }
