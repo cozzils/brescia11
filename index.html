@@ -7,19 +7,22 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/sito_principale.css">
     <link rel="icon" href="images/brescia11.jpg">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header class="header">
-        <div class="header-content">
-            <h1>NOVIZIATO BS11</h1>
-            <p>Strada · Comunità · Servizio</p>
-            <div class="hamburger" id="hamburger">
-                <i class="fas fa-bars"></i>
-            </div>
+
+    <div class="header-content" style="background-color: #175019; ">
+        <div>
+            <h1 style="text-align: center; font-size: 2rem; color: #FFFFFF;">NOVIZIATO BS11</h1>
+            <p class="header-subtitle" style="margin: 5px 0 0; color: #E8F5E9; text-align: center;">Strada · Comunità · Servizio</p>
         </div>
+        <div class="hamburger" id="hamburger" style="color: #FFFFFF; cursor: pointer;">
+            <i class="fas fa-bars"></i>
+        </div>
+    </div>
     </header>
 
-    <nav class="nav">
+    <nav class="nav" id="main-nav">
         <ul class="nav-list" id="nav-list">
             <li><a href="#strada"><i class="fas fa-hiking"></i> La Strada</a></li>
             <li><a href="#servizio"><i class="fas fa-hands-helping"></i> Servizio</a></li>
@@ -30,19 +33,23 @@
     </nav>
 
     <div class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Noviziato BS11</h1>
             <p class="subtitle">"La strada è la stessa per tutti, il cammino è di ciascuno"</p>
-            <a href="#attivita" class="btn">Scopri le nostre attività</a>
+            <a href="#attivita" class="btn btn-hero">Scopri le nostre attività</a>
         </div>
     </div>
 
     <main class="main-content">
         <section id="dashboard" class="section">
-            <h2><i class="fas fa-th-large"></i> noi</h2>
+            <h2 class="section-title"><i class="fas fa-th-large"></i> Noi</h2>
             <div class="dashboard">
                 <div class="dashboard-card">
-                    <h3><i class="fas fa-users"></i> Comunità</h3>
+                    <div class="card-header">
+                        <i class="fas fa-users card-icon"></i>
+                        <h3>Comunità</h3>
+                    </div>
                     <div class="stat-number">7</div>
                     <p>Novizi in cammino</p>
                     <div class="badges">
@@ -51,228 +58,275 @@
                     </div>
                 </div>
                 <div class="dashboard-card">
-                    <h3><i class="fas fa-calendar-check"></i> Prossimi Eventi</h3>
-                    <ul style="list-style: none; margin-top: 1rem;">
-                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 0.5rem;"></i> Route di Pasqua</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 0.5rem;"></i> Toreno di scoutball</li>
-                        <li><i class="fas fa-circle" style="font-size: 0.5rem; margin-right: 0.5rem;"></i> Route Estiva</li>
+                    <div class="card-header">
+                        <i class="fas fa-calendar-check card-icon"></i>
+                        <h3>Prossimi Eventi</h3>
+                    </div>
+                    <ul class="event-list">
+                        <li><i class="fas fa-circle event-dot"></i> Route di Pasqua</li>
+                        <li><i class="fas fa-circle event-dot"></i> Toreno di scoutball</li>
+                        <li><i class="fas fa-circle event-dot"></i> Route Estiva</li>
                     </ul>
                 </div>
                 <div class="dashboard-card oratorio-card">
-                    <h3><i class="fas fa-church"></i> Serate Oratorio</h3>
+                    <div class="card-header">
+                        <i class="fas fa-church card-icon"></i>
+                        <h3>Serate Oratorio</h3>
+                    </div>
                     <p>Accedi al portale delle serate in oratorio</p>
-                    <a href="sito.html" class="btn" id="sito.html">vai al sito</a>
+                    <a href="sito.html" class="btn btn-light" id="sito.html">Vai al sito</a>
                 </div>
                 <div class="dashboard-card">
-                    <h3><i class="fas fa-link"></i> Collegamenti Rapidi</h3>
-                    <a href="https://gruppi.agesci.it/brescia11/" class="btn">BS11</a>
-                    <a href="https://lombardia.agesci.it/cose-lo-scautismo/" class="btn">AGESCI Brescia</a>
+                    <div class="card-header">
+                        <i class="fas fa-link card-icon"></i>
+                        <h3>Collegamenti Rapidi</h3>
+                    </div>
+                    <div class="link-buttons">
+                        <a href="https://gruppi.agesci.it/brescia11/" class="btn btn-outline">BS11</a>
+                        <a href="https://lombardia.agesci.it/cose-lo-scautismo/" class="btn btn-outline">AGESCI Brescia</a>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section id="strada" class="section">
-            <h2><i class="fas fa-hiking"></i> La Strada</h2>
-            <div class="quote">
-                "Il Noviziato è tempo di scoperta della strada come segno della provvisorietà e come luogo di conoscenza di sé e degli altri"
+        <h1 class="section-title centered">LE NOSTRE AVVENTURE</h1>
+        
+        <div class="strada-grid">
+            <div class="strada-card coming-soon">
+                <div class="strada-icon">
+                    <i class="fas fa-compass"></i>
+                </div>
+                <h3>Uscita di apertura</h3>
+                <p>Un nuovo cammino di scoperta e condivisione</p>
+                <p class="strada-date">Novembre 2024</p>
+                <a href="apertura.html" class="btn strada-btn">Visita L'avventura</a>
             </div>
-            <div class="activities-grid">
-                <div class="activity-card">
-                    <h3>Route Invernale</h3>
-                    <p>4 giorni sulle Alpi alla scoperta di noi stessi e della comunita</p>
-                    <p>gennaio 2025</p>
-                    <a href="Route_invernale.html" class="btn">Foto e racconti</a>
+
+            <div class="strada-card">
+                <div class="strada-icon">
+                    <i class="fas fa-mountain"></i>
                 </div>
-                <div class="activity-card">
-                    <h3>In arrivo</h3>
-                    <p></p>
-                    <p></p>
-                    <a href="#" class="btn"></a>
-                </div>
+                <h3>Route Invernale</h3>
+                <p>4 giorni sulle Alpi alla scoperta di noi stessi e della comunità</p>
+                <p class="strada-date">Gennaio 2025</p>
+                <a href="Route_invernale.html" class="btn strada-btn">Foto e racconti</a>
             </div>
             
-        </section>
+            <div class="strada-card coming-soon">
+                <div class="strada-icon">
+                    <i class="fas fa-campground"></i>
+                </div>
+                <h3>Camminata a Conche</h3>
+                <p>L'avventura che conclude il nostro anno di Noviziato</p>
+                <p class="strada-date">Luglio 2025</p>
+                <a href="camminataConche.html" class="btn strada-btn">Foto e racconti</a>
+            </div>
+        </div>
 
         <section id="servizio" class="section">
-            <h2><i class="fas fa-hands-helping"></i> Il Nostro Servizio</h2>
+            <h2 class="section-title"><i class="fas fa-hands-helping"></i> Il Nostro Servizio</h2>
             <div class="activities-grid">
                 <div class="activity-card">
                     <h3>Canile le musee</h3>
                     <p>Servizio svolto presso il canile le Musee</p>
-                    <p>Svolto il 09/02/2025</p>
+                    <p class="activity-date">Svolto il 09/02/2025</p>
                     <a href="canile.html" class="btn">Il canile</a>
                 </div>
                 <div class="activity-card">
                     <h3>Prossimamente</h3>
                     <p>Abbiamo ancora molte idee di servizio da svolgere</p>
                     <p></p>
-                    <a href="#" class="btn"></a>
+                    <a href="#" class="btn btn-disabled">In arrivo</a>
                 </div>
             </div>
         </section>
 
         <section id="attivita" class="section">
-            <h2><i class="fas fa-calendar-alt"></i> Prossime Attività</h2>
+            <h2 class="section-title"><i class="fas fa-calendar-alt"></i> Prossime Attività</h2>
             <div class="activities-grid">
                 <div class="activity-card">
                     <h3>Route di Pasqua</h3>
-                    <p>Data: 28-31 Marzo 2025</p>
-                    <p>Tema: "Il coraggio di scegliere"</p>
+                    <p><i class="fas fa-calendar"></i> Data: 28-31 Marzo 2025</p>
+                    <p><i class="fas fa-tag"></i> Tema: "Il coraggio di scegliere"</p>
                     <a href="#" class="btn">Informazioni</a>
                 </div>
-                <div class="activity-card">
-                    <h3></h3>
+                <div class="activity-card future-activity">
+                    <div class="future-badge">In programma</div>
+                    <h3>Nuova attività</h3>
+                    <p>Dettagli in arrivo</p>
                     <p></p>
-                    <p></p>
-                    <a href="#" class="btn"></a>
+                    <a href="#" class="btn btn-disabled">Prossimamente</a>
                 </div>
             </div>
         </section>
 
         <section id="noviziato" class="section">
-            <h2><i class="fas fa-users"></i> Il Noviziato</h2>
-            <section id="contatti" class="section">
-                <h2><i class="fas fa-envelope"></i> Contatti</h2>
-                
-                <div class="contacts-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
-                    <!-- Info Contatti -->
-                    <div class="contact-info" style="background: var(--light-beige); padding: 2rem; border-radius: 8px;">
-                        <h3><i class="fas fa-info-circle"></i> Informazioni</h3>
-                        <ul style="list-style: none; margin-top: 1rem;">
-                            <li style="margin-bottom: 1rem;">
-                                <i class="fas fa-map-marker-alt" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                <strong>Sede:</strong> Parrocchia di San Francesco Da Paola
-                            </li>
-                            <li style="margin-bottom: 1rem;">
-                                <i class="fas fa-phone" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                <strong>Telefono:</strong> 030 371 425 3750
-                            </li>
-                            <li style="margin-bottom: 1rem;">
-                                <i class="fas fa-envelope" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                <strong>Email:</strong> noviziatobs11@gmail.com
-                            </li>
-                        </ul>
-    
-                        <h4 style="margin-top: 2rem;"><i class="fas fa-user-tie"></i> Maestri dei Novizi</h4>
-                        <ul style="list-style: none; margin-top: 1rem;">
-                            <li style="margin-bottom: 1rem;">
-                                <i class="fas fa-user" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                Adri: 333 1234567
-                            </li>
-                            <li style="margin-bottom: 1rem;">
-                                <i class="fas fa-user" style="color: var(--scout-green); margin-right: 0.5rem;"></i>
-                                Matte: 333 7654321
-                            </li>
-                        </ul>
-                    </div>
-    
-                    <!-- Form di Contatto -->
-                    <div class="contact-form" style="background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
-                        <h3><i class="fas fa-paper-plane"></i> Scrivici</h3>
-                        <form id="contactForm" onsubmit="sendEmail(event)">
-                            <div style="margin-bottom: 1rem;">
-                                <label for="name" style="display: block; margin-bottom: 0.5rem;">Nome e Cognome</label>
-                                <input type="text" id="name" name="name" required 
-                                    style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
-                            </div>
-                            
-                            <div style="margin-bottom: 1rem;">
-                                <label for="email" style="display: block; margin-bottom: 0.5rem;">Email</label>
-                                <input type="email" id="email" name="email" required 
-                                    style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
-                            </div>
-                            
-                            <div style="margin-bottom: 1rem;">
-                                <label for="subject" style="display: block; margin-bottom: 0.5rem;">Oggetto</label>
-                                <select id="subject" name="subject" required 
-                                    style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;">
-                                    <option value="">
-                                        Seleziona un oggetto</option>
-                                    <option value="info">
-                                        Informazioni generali</option>
-                                    <option value="iscrizione">
-                                        Iscrizione Gruppo</option>
-                                    <option value="collaborazione">
-                                        Proposta di collaborazione</option>
-                                    <option value="altro">
-                                        Altro</option>
-                                </select>
-                            </div>
-                            
-                            <div style="margin-bottom: 1rem;">
-                                <label for="message" style="display: block; margin-bottom: 0.5rem;">Messaggio</label>
-                                <textarea id="message" name="message" required 
-                                    style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px; min-height: 150px;"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="btn" style="width: 100%;">
-                                <i class="fas fa-paper-plane"></i> Invia Messaggio
-                            </button>
-                        </form>
-                    </div>
-                    
-                    <script>
-                    function sendEmail(event) {
-                        event.preventDefault();
-                        
-                        const name = document.getElementById('name').value;
-                        const email = document.getElementById('email').value;
-                        const subject = document.getElementById('subject').value;
-                        const message = document.getElementById('message').value;
-                        
-                        // Prepare email body
-                        const emailBody = ` 
-                    Nome: ${name}
-                    Email: ${email}
-                    Oggetto: ${subject}
-                    
-                    Messaggio:
-                    ${message}
-                        `;
-                        
-                        // Create mailto URL
-                        const mailtoUrl = `mailto:noviziatobs11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
-                        
-                        // Open default email client
-                        window.location.href = mailtoUrl;
-                    }
-                    </script>
-    
-             <!-- Mappa e Social -->
-<div class="contact-social" style="background: var(--light-beige); padding: 2rem; border-radius: 8px;">
-    <h3><i class="fas fa-share-alt"></i> Seguici</h3>
-    <div class="social-grid" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-top: 1rem;">
-        <a href="#" class="social-btn" style="background: #3b5998; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
-            <i class="fab fa-facebook"></i> Facebook
-        </a>
-        <a href="https://www.instagram.com/noviziato.wanderlust_bs11/" target="_blank" class="social-btn" style="background: #e1306c; color: white; padding: 0.8rem; border-radius: 4px; text-align: center; text-decoration: none;">
-            <i class="fab fa-instagram"></i> Instagram
-        </a>
-    </div>
+            <h2 class="section-title"><i class="fas fa-users"></i> Il Noviziato</h2>
+            <div class="noviziato-content">
+                <div class="noviziato-image">
+                    <img src="../assets/banner.jpg" alt="Noviziato in cammino">
+                </div>
+                <div class="noviziato-text">
+                    <p>Il Noviziato è un momento fondamentale nel percorso scout, un periodo di scoperta e crescita personale attraverso la strada, la comunità e il servizio.</p>
+                    <blockquote class="quote">
+                        "Il vero modo di essere felici è quello di procurare felicità agli altri."
+                        <cite>- Baden Powell</cite>
+                    </blockquote>
+                </div>
+            </div>
+        </section>
 
-    <h4 style="margin-top: 2rem;"><i class="fas fa-map-marked-alt"></i> Dove siamo</h4>
-    <div class="map-container" style="margin-top: 1rem; width: 100%; height: 300px; border-radius: 4px; overflow: hidden;">
-        <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.688158458626!2d10.245140076880531!3d45.53202417107516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47819df6ee95a4cb%3A0xe4b3fda017965e01!2sParrocchia%20di%20San%20Francesco%20Da%20Paola!5e1!3m2!1sit!2sit!4v1739182085657!5m2!1sit!2sit"
-            width="100%" 
-            height="100%" 
-            style="border:0;" 
-            allowfullscreen="" 
-            loading="lazy" 
-            referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-    </div>
-</div>
+        <section id="contatti" class="section">
+            <h2 class="section-title"><i class="fas fa-envelope"></i> Contatti</h2>
+            
+            <div class="contacts-grid">
+                <!-- Info Contatti -->
+                <div class="contact-info">
+                    <h3><i class="fas fa-info-circle"></i> Informazioni</h3>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <strong>Sede:</strong> Parrocchia di San Francesco Da Paola
+                        </li>
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <strong>Telefono:</strong> 030 371 425 3750
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <strong>Email:</strong> noviziatobs11@gmail.com
+                        </li>
+                    </ul>
 
-            </section>
-        </main>
-        <footer>
+                    <h4><i class="fas fa-user-tie"></i> Maestri dei Novizi</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <i class="fas fa-user"></i>
+                            Adri: 333 1234567
+                        </li>
+                        <li>
+                            <i class="fas fa-user"></i>
+                            Matte: 333 7654321
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Form di Contatto -->
+                <div class="contact-form">
+                    <h3><i class="fas fa-paper-plane"></i> Scrivici</h3>
+                    <form id="contactForm" onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label for="name">Nome e Cognome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Oggetto</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Seleziona un oggetto</option>
+                                <option value="info">Informazioni generali</option>
+                                <option value="iscrizione">Iscrizione Gruppo</option>
+                                <option value="collaborazione">Proposta di collaborazione</option>
+                                <option value="altro">Altro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Messaggio</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-full">
+                            <i class="fas fa-paper-plane"></i> Invia Messaggio
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Mappa e Social -->
+                <div class="contact-social">
+                    <h3><i class="fas fa-share-alt"></i> Seguici</h3>
+                    <div class="social-grid">
+                        <a href="#" class="social-btn facebook">
+                            <i class="fab fa-facebook"></i> Facebook
+                        </a>
+                        <a href="https://www.instagram.com/noviziato.wanderlust_bs11/" target="_blank" class="social-btn instagram">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                    </div>
+
+                    <h4><i class="fas fa-map-marked-alt"></i> Dove siamo</h4>
+                    <div class="map-container">
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.688158458626!2d10.245140076880531!3d45.53202417107516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47819df6ee95a4cb%3A0xe4b3fda017965e01!2sParrocchia%20di%20San%20Francesco%20Da%20Paola!5e1!3m2!1sit!2sit!4v1739182085657!5m2!1sit!2sit"
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-campground"></i>
+                <h3>NOVIZIATO BS11</h3>
+            </div>
             <p>© 2025 BS11. Tutti i diritti riservati.</p>
-        </footer>
-    </body>
+        </div>
+    </footer>
+
     <script>
+        // Toggle menu
         document.getElementById('hamburger').addEventListener('click', function() {
             document.getElementById('nav-list').classList.toggle('show');
         });
+
+        // Sticky navigation
+        window.addEventListener('scroll', function() {
+            const nav = document.getElementById('main-nav');
+            if (window.scrollY > 100) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+
+        // Email form
+        function sendEmail(event) {
+            event.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const subject = document.getElementById('subject').value;
+            const message = document.getElementById('message').value;
+            
+            // Prepare email body
+            const emailBody = ` 
+        Nome: ${name}
+        Email: ${email}
+        Oggetto: ${subject}
+        
+        Messaggio:
+        ${message}
+            `;
+            
+            // Create mailto URL
+            const mailtoUrl = `mailto:noviziatobs11@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+            
+            // Open default email client
+            window.location.href = mailtoUrl;
+        }
     </script>
+</body>
 </html>

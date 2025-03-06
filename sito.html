@@ -4,62 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scout Brescia - Serate in Oratorio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/sito.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <a href="index.html" class="back-button">← Torna al Sito Principale</a>
-      <section class="hero">
-        <div class="hero-content">
-            <h1>Serate Scout in Oratorio</h1>
-            <p>Divertimento, Amicizia e Crescita Personale per Ragazzi</p>
-            <a href="#attivita" class="cta-button">Scopri di Più</a>
+    <!-- Navigation -->
+    <nav class="fixed-nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-link home-link">
+                <i data-lucide="arrow-left"></i>
+                <span class="nav-text">Torna al Sito Principale</span>
+            </a>
+            
+            <a href="https://www.instagram.com/noviziato.wanderlust_bs11/" target="_blank" rel="noopener noreferrer" class="nav-link instagram-link">
+                <i data-lucide="instagram"></i>
+                <span class="nav-text">Seguici su Instagram</span>
+            </a>
         </div>
-    </section>
+    </nav>
 
-    <section id="attivita" class="section">
-        <h2 class="section-title">Le Nostre Proposte</h2>
-        <div class="mobile-grid">
-            <div class="mobile-card">
-                <h3>Giochi da Tavolo</h3>
-                <p>Sviluppiamo strategia e collaborazione.</p>
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-background"></div>
+            <div class="hero-content">
+                <h1>Serate Scout in Oratorio</h1>
+                <p>Divertimento, Amicizia e Crescita Personale per Ragazzi</p>
+                <button class="cta-button">Scopri di Più</button>
             </div>
-            <div class="mobile-card">
-                <h3>Giochi di Squadra</h3>
-                <p>Promuoviamo lavoro di gruppo.</p>
-            </div>
-            <div class="mobile-card">
-                <h3>Attività Educative</h3>
-                <p>Stimoliamo creatività individuale.</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="dove-trovarci" class="section">
-        <h2 class="section-title">Dove Trovarci</h2>
-        <div class="mobile-grid">
-            <div class="mobile-card location-card">
-                <h3>Indirizzo</h3>
-                <p>Parrocchia San Francesco Da Paola<br>Via Benacense, 27<br>25123 Brescia BS</p>
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="card-container">
+                <div class="card">
+                    <h3>Giochi da Tavolo</h3>
+                    <p>Sviluppiamo strategia e collaborazione attraverso giochi coinvolgenti.</p>
+                </div>
+                <div class="card">
+                    <h3>Giochi di Squadra</h3>
+                    <p>Promuoviamo lavoro di gruppo e spirito di squadra con attività all'aperto.</p>
+                </div>
+                <div class="card">
+                    <h3>Attività Educative</h3>
+                    <p>Stimoliamo creatività e crescita personale con progetti formativi.</p>
+                </div>
             </div>
-            <div class="mobile-card location-card">
-                <h3>Orari Attività</h3>
-                <p>Ogni Settimana<br>Orari in Definizione</p>
-            </div>
-            <div class="mobile-card location-card">
-                <h3>Contatti</h3>
-                <p>Email: noviziatobs11@gmail.com<br>Tel: +39 371 425 3750</p>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section experience">
-        <h2 class="section-title" style="color: white;">La Nostra Esperienza</h2>
-        <p>Noi del Bs11 abbiamo maturato una profonda esperienza nell'organizzazione di attività coinvolgenti e formative.</p>
-    </section>
+        <!-- Location Section -->
+        <section class="location-section">
+            <div class="info-container">
+                <div class="info-card">
+                    <i data-lucide="map-pin"></i>
+                    <h3>Dove Trovarci</h3>
+                    <p>
+                        Parrocchia San Francesco Da Paola<br>
+                        Via Benacense, 27<br>
+                        25123 Brescia BS
+                    </p>
+                </div>
+                <div class="info-card">
+                    <i data-lucide="clock"></i>
+                    <h3>Orari Attività</h3>
+                    <p>
+                        Ogni Settimana<br>
+                        Orari in Definizione
+                    </p>
+                </div>
+                <div class="info-card">
+                    <i data-lucide="mail"></i>
+                    <h3>Contatti</h3>
+                    <p>
+                        Email: noviziatobs11@gmail.com<br>
+                        Tel: +39 371 425 3750
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
 
-    <footer>
+    <!-- Footer -->
+    <footer class="footer">
         <p>© 2025 BS11. Tutti i diritti riservati.</p>
     </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
 </body>
 </html>
