@@ -389,6 +389,7 @@ a:hover {
     overflow: hidden;
 }
 
+
 .strada-card::after {
     content: '';
     position: absolute;
